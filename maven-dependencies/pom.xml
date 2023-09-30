@@ -1,0 +1,69 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <!--  Project Coordinates-->
+    <groupId>org.example</groupId>
+    <artifactId>maven-dependencies</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+
+  <!--  Artifact Packaging-->
+    <packaging>jar</packaging>
+
+  <!--  Project Properties-->
+    <properties>
+        <java.version>17</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <junit.version>5.10.0</junit.version>
+        <slf4j.version>2.0.9</slf4j.version>
+        <logback.version>1.4.11</logback.version>
+    </properties>
+
+  <!--  Centralized Dependencies Information That Can be Referenced In Project And Subprojects  -->
+    <dependencyManagement>
+        <dependencies>
+
+          <!-- Logging Framework - SLF4J + Logback -->
+          <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+          </dependency>
+
+          <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+          </dependency>
+
+
+          <!--  Testing Framework-->
+            <dependency>
+              <groupId>org.junit.jupiter</groupId>
+              <artifactId>junit-jupiter-engine</artifactId>
+              <version>${junit.version}</version>
+            </dependency>
+
+            <dependency>
+              <groupId>org.junit.jupiter</groupId>
+              <artifactId>junit-jupiter-api</artifactId>
+              <version>${junit.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+  <!-- Dependencies To Include In Project -->
+  <dependencies>
+
+        <!-- SLF4J (OMITTED) IS TRANSITIVE DEPENDENCY -->
+        <dependency>
+          <groupId>ch.qos.logback</groupId>
+          <artifactId>logback-classic</artifactId>
+          <!-- Version Inherited From Centralized DependencyManagement -->
+        </dependency>
+
+  </dependencies>
+
+</project>
