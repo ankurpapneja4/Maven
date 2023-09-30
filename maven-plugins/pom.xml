@@ -7,6 +7,11 @@
     <packaging>jar</packaging>
     <version>1.0.0-SNAPSHOT</version>
 
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>ch.qos.logback</groupId>
@@ -56,6 +61,26 @@
                 </descriptorRefs>
             </configuration>
         </plugin>
+
+        <!-- ToDo : Generate Javadoc -->
+         <plugin>
+             <groupId>org.apache.maven.plugins</groupId>
+             <artifactId>maven-javadoc-plugin</artifactId>
+             <version>3.6.0</version>
+             <!-- Execute Goal:javadoc In Phase:site -->
+             <executions>
+                 <execution>
+                     <phase>site</phase>
+                     <goals>
+                         <goal>javadoc</goal>
+                     </goals>
+                 </execution>
+             </executions>
+             <!-- Configuration -->
+             <configuration>
+                 <sourcepath>${project.build.sourceDirectory}</sourcepath>
+             </configuration>
+         </plugin>
       </plugins>
     </build>
 
