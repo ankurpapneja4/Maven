@@ -13,4 +13,13 @@
     <modules>
         <module>jpa-entities</module>
     </modules>
+
+    <properties>
+        <java.version>17</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.comiler.source>${java.version}</maven.comiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+    </properties>
+
+
 </project>
