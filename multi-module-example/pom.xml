@@ -19,7 +19,28 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.comiler.source>${java.version}</maven.comiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
+        <hibernate.version>6.3.1.Final</hibernate.version>
+        <lombok.version>1.18.30</lombok.version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>org.hibernate.orm</groupId>
+                <artifactId>hibernate-core</artifactId>
+                <version>${hibernate.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
 
 
 </project>
