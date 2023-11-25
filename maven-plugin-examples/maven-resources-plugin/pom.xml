@@ -14,6 +14,19 @@
     </properties>
 
     <build>
+
+        <resources>
+            <resource>
+                <directory>src/resources1</directory>
+            </resource>
+            <resource>
+                <directory>src/resources2</directory>
+            </resource>
+            <resource>
+                <directory>src/resources3</directory>
+            </resource>
+        </resources>
+
         <pluginManagement>
             <plugins>
                 <plugin>
