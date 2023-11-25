@@ -10,4 +10,7 @@
 
     <packaging>pom</packaging>
 
+    <modules>
+        <module>jpa-entities</module>
+    </modules>
 </project>
