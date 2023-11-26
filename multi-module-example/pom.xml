@@ -69,7 +69,7 @@
                 <plugin>
                     <groupId>org.jvnet.jaxb</groupId>
                     <artifactId>jaxb-maven-plugin</artifactId>
-                    <version>4.0.0</version>
+                    <version>${jaxb.plugin.version}</version>
                     <executions>
                         <execution>
                             <goals>
