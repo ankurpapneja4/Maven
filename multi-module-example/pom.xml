@@ -26,6 +26,7 @@
         <lombok.version>1.18.30</lombok.version>
         <jaxb.version>4.0.1</jaxb.version>
         <jaxb.plugin.version>4.0.0</jaxb.plugin.version>
+        <mapstruct.version>1.5.5.Final</mapstruct.version>
     </properties>
 
     <dependencyManagement>
@@ -60,6 +61,13 @@
                 <groupId>com.sun.xml.bind</groupId>
                 <artifactId>jaxb-core</artifactId>
                 <version>${jaxb.version}</version>
+            </dependency>
+
+            <!-- MapStruct -->
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${mapstruct.version}</version>
             </dependency>
 
         </dependencies>
