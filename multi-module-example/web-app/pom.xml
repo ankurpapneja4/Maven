@@ -15,6 +15,7 @@
 
     <dependencies>
 
+        <!-- Transitive Dependencies: From `mapper` Module
         <dependency>
             <groupId>com.example</groupId>
             <artifactId>jpa-entities</artifactId>
@@ -24,6 +25,14 @@
         <dependency>
             <groupId>com.example</groupId>
             <artifactId>web-api</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        -->
+
+        <!-- ToDo: Add Dependency For Mapper Modeule -->
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>mapper</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
 
