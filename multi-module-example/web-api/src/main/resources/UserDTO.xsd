@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:jaxb="https://jakarta.ee/xml/ns/jaxb" jaxb:version="3.0">
+
+    <!--This tells JAXB what package to create the Java classes in-->
+    <annotation>
+        <appinfo>
+            <jaxb:schemaBindings>
+                <jaxb:package name="com.example.domain"/>
+            </jaxb:schemaBindings>
+        </appinfo>
+    </annotation>
+
+    <complexType name="UserDTO">
+        <sequence>
+            <element name="firstName" type="string"/>
+            <element name="lastName" type="string"/>
+            <element name="email" type="string"/>
+        </sequence>
+    </complexType>
+
+</schema>
