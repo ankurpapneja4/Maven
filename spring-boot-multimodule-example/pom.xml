@@ -19,6 +19,7 @@
 
     <modules>
         <module>web-model</module>
+        <module>web-app</module>
     </modules>
 
     <properties>
