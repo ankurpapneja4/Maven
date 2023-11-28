@@ -13,6 +13,11 @@
     <artifactId>web-model</artifactId>
     <packaging>jar</packaging>
 
+    <properties>
+        <!-- Skip goal spring-boot:repackage -->
+        <spring-boot.repackage.skip>true</spring-boot.repackage.skip>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
